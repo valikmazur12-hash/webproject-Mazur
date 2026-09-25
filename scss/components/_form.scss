@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space / 2;
+  margin-bottom: $space * 2;
+
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  &__input {
+    padding: $space;
+    border: 1px solid var(--color-border);
+    border-radius: $radius;
+    font: inherit;
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color $transition;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__error {
+    font-size: 0.75rem;
+    color: #dc2626;
+    display: none;
+  }
+
+  &--invalid {
+    .field__input {
+      border-color: #dc2626;
+    }
+    .field__error {
+      display: block;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

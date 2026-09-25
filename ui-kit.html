@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI-Kit — PrintSpace</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body style="padding: 40px; max-width: 900px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+            <h1 style="margin: 0;">UI-Кіт PrintSpace</h1>
+            <p style="color: var(--color-muted); margin: 5px 0 0 0;">Перевірка всіх компонентів (Завдання 2–5)</p>
+        </div>
+        <a href="index.html" class="button button--ghost">На головну</a>
+    </div>
+
+    <!-- Перемикач тем (Завдання 5) -->
+    <div style="margin: 20px 0; padding: 15px; background: var(--color-border); border-radius: var(--radius);">
+        <button class="button button--secondary" onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')">
+            Змінити тему (Світла / Темна)
+        </button>
+    </div>
+
+    <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--color-border);">
+
+    <!-- Навігація (Завдання 4) -->
+    <section style="margin-bottom: 40px;">
+        <h2>1. Навігація (.nav)</h2>
+        <ul class="nav">
+            <li><a href="#" class="nav__link nav__link--active">Головна</a></li>
+            <li><a href="#" class="nav__link">Каталог</a></li>
+            <li><a href="#" class="nav__link">Контакти</a></li>
+        </ul>
+    </section>
+
+    <!-- Кнопки (Завдання 2) -->
+    <section style="margin-bottom: 40px;">
+        <h2>2. Кнопки (.button)</h2>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="button button--primary">Primary</button>
+            <button class="button button--secondary">Secondary</button>
+            <button class="button button--ghost">Ghost</button>
+            <button class="button button--primary" disabled>Disabled</button>
+        </div>
+    </section>
+
+    <!-- Сповіщення (Завдання 4) -->
+    <section style="margin-bottom: 40px;">
+        <h2>3. Сповіщення (.alert)</h2>
+        <div class="alert alert--success">Успіх! Операція виконана успішно.</div>
+        <div class="alert alert--error">Помилка! Щось пішло не так.</div>
+        <div class="alert alert--warning">Увага! Перевірте правильність даних.</div>
+    </section>
+
+    <!-- Форми (Завдання 3) -->
+    <section style="margin-bottom: 40px; max-width: 400px;">
+        <h2>4. Форми (.field)</h2>
+        <div class="field">
+            <label class="field__label">Звичайне поле</label>
+            <input type="text" class="field__input" placeholder="Введіть текст...">
+        </div>
+        <div class="field field--invalid" style="margin-top: 15px;">
+            <label class="field__label">Поле з помилкою</label>
+            <input type="text" class="field__input" value="невірне значення">
+            <span class="field__error">Помилка: заповніть поле коректно</span>
+        </div>
+    </section>
+
+    <!-- Картки (Завдання 3) -->
+    <section style="margin-bottom: 40px;">
+        <h2>5. Картки (.card)</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="card" style="width: 260px;">
+                <div class="card__image"></div>
+                <h3 class="card__title">Принтер HP</h3>
+                <p class="card__text">Звичайний опис моделі принтера.</p>
+                <div class="card__footer">
+                    <span style="font-weight: bold; color: var(--color-primary);">3 999 грн</span>
+                    <button class="button button--primary">Купити</button>
+                </div>
+            </div>
+            <div class="card card--featured" style="width: 260px;">
+                <div class="card__image"></div>
+                <h3 class="card__title">Принтер Pro (Featured)</h3>
+                <p class="card__text">Рекомендована акційна модель.</p>
+                <div class="card__footer">
+                    <span style="font-weight: bold; color: var(--color-primary);">8 999 грн</span>
+                    <button class="button button--primary">Купити</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

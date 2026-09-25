@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: $space;
+  padding: $space * 1.5 $space * 3;
+  border: 1px solid transparent;
+  border-radius: $radius;
+  font: inherit;
+  cursor: pointer;
+  transition: background $transition, border-color $transition;
+
+  &--primary {
+    background: var(--color-primary);
+    color: #fff;
+    &:hover { background: var(--color-primary-dark, #1f4a34); }
+  }
+
+  &--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+    &:hover { background: darken(#f0a202, 10%); }
+  }
+
+  &--ghost {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text);
+    &:hover { background: var(--color-border); }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

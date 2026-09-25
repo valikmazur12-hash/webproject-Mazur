@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+
+.alert {
+  padding: $space * 1.5;
+  border-radius: $radius;
+  margin-bottom: $space * 2;
+  border: 1px solid transparent;
+
+  &--success {
+    background: #ecfdf5;
+    color: #065f46;
+    border-color: #a7f3d0;
+  }
+
+  &--error {
+    background: #fef2f2;
+    color: #991b1b;
+    border-color: #fecaca;
+  }
+
+  &--warning {
+    background: #fffbeb;
+    color: #92400e;
+    border-color: #fde68a;
+  }
+}

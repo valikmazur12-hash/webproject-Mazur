@@ -18,3 +18,19 @@ $transition: 0.2s ease;
 // Точки адаптивності
 $bp-tablet: 768px;
 $bp-desktop: 1200px;
+:root {
+    --color-bg: #{$color-bg};
+    --color-text: #{$color-text};
+    --color-primary: #{$color-primary};
+    --color-secondary: #{$color-secondary};
+    --color-border: #{$color-border};
+    --color-muted: #{$color-muted};
+}  
+[data-theme="dark"] {
+    --color-bg: #12181b;
+    --color-text: #e8eaed;
+    --color-primary: #4f9d75;
+    --color-secondary: #f0a202;
+    --color-border: #27343b;
+    --color-muted: #9aa5b1;
+}

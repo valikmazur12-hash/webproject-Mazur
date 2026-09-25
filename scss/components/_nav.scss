@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+
+.nav {
+  display: flex;
+  gap: $space * 3;
+  list-style: none;
+
+  &__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition;
+
+    &:hover, &--active {
+      color: var(--color-primary);
+    }
+  }
+}

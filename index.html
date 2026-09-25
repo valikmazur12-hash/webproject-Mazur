@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="uk">
-<link>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintSpace — Інтернет-магазин принтерів</title>
     <link rel="stylesheet" href="css/main.css">
-    <title>Головна сторінка</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h1 {
-            color: #0066cc;
-        }
-    </style>
 </head>
 <body>
-    <h1>Ласкаво просимо на мій сайт!</h1>
-    <p>Сайт знаходиться в процесі розробки.</p>
+    <header style="padding: 20px; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+        <h2 style="color: var(--color-primary); margin: 0;">PrintSpace</h2>
+        <ul class="nav">
+            <li><a href="index.html" class="nav__link nav__link--active">Головна</a></li>
+            <li><a href="ui-kit.html" class="nav__link">UI-Kit (Компоненти)</a></li>
+        </ul>
+    </header>
+
+    <main style="padding: 40px; max-width: 1000px; margin: 0 auto;">
+        <div class="alert alert--success">
+            Ласкаво просимо в інтернет-магазин PrintSpace! Усі системи працюють стабільно.
+        </div>
+
+        <h1>Каталог принтерів</h1>
+        <p style="color: var(--color-muted); margin-bottom: 30px;">Оберіть найкраще обладнання для офісу чи дому.</p>
+
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <!-- Картка 1 -->
+            <div class="card" style="width: 280px;">
+                <div class="card__image"></div>
+                <h3 class="card__title">Лазерний принтер HP</h3>
+                <p class="card__text">Швидкий та економічний монохромний друк.</p>
+                <div class="card__footer">
+                    <span style="font-weight: bold; color: var(--color-primary);">5 499 грн</span>
+                    <button class="button button--primary">Купити</button>
+                </div>
+            </div>
+
+            <!-- Картка 2 (Рекомендована) -->
+            <div class="card card--featured" style="width: 280px;">
+                <div class="card__image"></div>
+                <h3 class="card__title">3D Принтер Creality</h3>
+                <p class="card__text">Професійне моделювання та висока точність.</p>
+                <div class="card__footer">
+                    <span style="font-weight: bold; color: var(--color-primary);">12 500 грн</span>
+                    <button class="button button--primary">Купити</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 20px; text-align: center; border-top: 1px solid var(--color-border); margin-top: 40px; color: var(--color-muted);">
+        &copy; 2026 PrintSpace. Усі права захищені.
+    </footer>
 </body>
 </html>
